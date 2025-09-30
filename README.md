@@ -21,6 +21,25 @@ _nuances, missing features, strange API, things to watchout, and wishlist_
 ### Query single ent by ID in View
 
 SwiftData can query single item by ID passed into View is possible, but not convenient. construct query in init method. now because of SwiftData your view needs init method.
+
+```swift
+struct BookmarkButton: View {
+    @Environment(\.modelContext) private var modelContext
+
+    var productID: ProductID
+
+    @Query private var allBookmarks: [ProductBookmark]
+
+    init(productID: ProductID) {
+        self.productID = productID
+        _allBookmarks = Query(filter: #Predicate { $0.productID.rawValue == productID.rawValue })
+    }
+```
+
+### Query custom comparables
+
+SwiftData requires to compare with `.rawValue`, even if custom types are Codable, Comparable, Hashable
+
 ```swift
 struct BookmarkButton: View {
     @Environment(\.modelContext) private var modelContext
