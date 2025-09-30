@@ -2,8 +2,10 @@
 
 _nuances, missing features, strange API, things to watchout, and wishlist_
 
+## ModelContext
+
 - SwiftData ModelContext is not Sendable, which makes it impossible to make async repositories (e.g. actors) that use SwiftData
-- SwiftData does NOT automatically remove stale models inserted into modelContext, manual deletion is necessary
+- SwiftData does not automatically remove stale models inserted into ModelContext, manual deletion is necessary
 
 ## Query
 
