@@ -2,6 +2,12 @@
 
 _nuances, missing features, strange API, things to watchout, and wishlist_
 
+## Migrations
+
+- on schema updates, SwiftData crashes if schema is not compatible (automatically upgradable)
+- chain of migration scripts (classes) is necessary
+- schema that did not have migration at first, then started to use migraitno scripts may have problems. decision about migration scripts is required from the start
+
 ## ModelContext
 
 - SwiftData ModelContext is not Sendable, which makes it impossible to make async repositories (e.g. actors) that use SwiftData
@@ -41,3 +47,4 @@ struct BookmarkButton: View {
 ## iCloud
 
 - SwiftData iCloud does not support unique IDs for objects
+- schema migration has to be triggered manually from Development environment and promoted to Production
