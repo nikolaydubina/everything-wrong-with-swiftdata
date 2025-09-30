@@ -36,7 +36,7 @@ struct BookmarkButton: View {
     }
 ```
 
-### Query custom comparables
+### Query custom Comparable
 
 SwiftData requires to compare with `.rawValue`, even if custom types are Codable, Comparable, Hashable
 
