@@ -11,7 +11,7 @@ _nuances, missing features, strange API, things to watchout, and wishlist_
 - SwiftData cannot query from inside ObservableObject, only from View query is possible (might be possible if pass modelcontext though, but not sure if notifications will work)
 
 
-### query single ent by id in view
+### Query single ent by ID in View
 
 SwiftData can query single item by ID passed into View is possible, but not convenient. construct query in init method. now because of SwiftData your view needs init method.
 ```swift
