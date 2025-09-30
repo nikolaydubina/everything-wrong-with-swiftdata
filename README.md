@@ -7,6 +7,10 @@ _nuances, missing features, strange API, things to watchout, and wishlist_
 - SwiftData cannot query dynamic properties (e.g. using Bidning and other dynamic data would not work) (TODO: verify this)
 - SwiftData does NOT automatically remove stale models inserted into modelContext, manual deletion is necessary
 
+## Model
+
+- SwiftData Model is not Sendable
+
 ## DataStore
 
 - SwiftData DataStore fetch method is sync, which renders it impossible to make HTTP calls
