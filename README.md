@@ -15,6 +15,7 @@ _nuances, missing features, strange API, things to watchout, and wishlist_
 
 ## Query
 
+- SwiftData cannot query by array member in field
 - SwiftData cannot query dynamic properties (e.g. using Bidning and other dynamic data would not work)
 - SwiftData cannot query from inside ObservableObject, only from View query is possible (might be possible if pass modelcontext though, but not sure if notifications will work)
 
@@ -67,3 +68,7 @@ struct BookmarkButton: View {
 
 - SwiftData iCloud does not support unique IDs for objects
 - schema migration has to be triggered manually from Development environment and promoted to Production
+
+## Deeply nested structs
+
+- SwiftData can handle deeply nested structs, as long as they are Codable. Nested data will be serialized automatically.
