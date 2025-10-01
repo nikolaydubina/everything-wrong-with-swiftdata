@@ -70,6 +70,7 @@ struct BookmarkButton: View {
 - there is no way to tell if sync is in-progress
 - there is no way to tell when sync will start
 - there is no way to trigger sync manually
+- only status of iCloud available is CloudKit Container `CKAccountStatus`
 - SwiftData iCloud does not support unique IDs for objects
 - schema migration has to be triggered manually from Development environment and promoted to Production
 
