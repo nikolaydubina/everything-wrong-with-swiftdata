@@ -73,6 +73,7 @@ struct BookmarkButton: View {
 - SwiftData iCloud does not support unique IDs for objects
 - schema migration has to be triggered manually from Development environment and promoted to Production
 
-## Deeply nested structs
+## Encoding
 
+- SwiftData does not detect custom coding keys for Codables. it requires additional method `func encode(to encoder: Encoder) throws {` to explicitly map to those keys
 - SwiftData can handle deeply nested structs, as long as they are Codable. Nested data will be serialized automatically.
