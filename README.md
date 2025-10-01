@@ -75,5 +75,5 @@ struct BookmarkButton: View {
 
 ## Encoding
 
-- SwiftData does not detect custom coding keys for Codables. it requires additional method `func encode(to encoder: Encoder) throws {` to explicitly map to those keys
+- SwiftData does not recognize `enum CodingKeys` in Codable
 - SwiftData can handle deeply nested structs, as long as they are Codable. Nested data will be serialized automatically.
