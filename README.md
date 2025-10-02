@@ -15,6 +15,7 @@ _nuances, missing features, strange API, things to watchout, and wishlist_
 
 ## Query
 
+- SwiftData cannot query for fields inside JSON encoded Data (exposed via cached private var and getters)
 - SwiftData cannot query by array member in field
 - SwiftData cannot query dynamic properties (e.g. using Bidning and other dynamic data would not work)
 - SwiftData cannot query from inside ObservableObject, only from View query is possible (might be possible if pass modelcontext though, but not sure if notifications will work)
