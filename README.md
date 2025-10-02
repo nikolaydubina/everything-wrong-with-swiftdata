@@ -76,5 +76,6 @@ struct BookmarkButton: View {
 
 ## Encoding
 
+- SwiftData does crashes on decoding Decimal whose parent struct is optional. SwiftData cannot decode back to optional parents data that is not-optional (Decimal) inside a struct
 - SwiftData does not recognize `enum CodingKeys` in Codable. (defining explicity encode and decode methods does not help)
 - SwiftData can handle deeply nested structs, as long as they are Codable. Nested data will be serialized automatically.
