@@ -16,7 +16,7 @@ _nuances, missing features, strange API, things to watchout, and wishlist_
 ## Query
 
 - SwiftData cannot query in JSON encoded Data (exposed via cached private var and getters)
-- SwiftData cannot query by array member in field when of Array of custom type, even if it is Codable, Hashable, Equitable, RawRepresentable
+- SwiftData cannot query by array member in field when of Array of custom type, even if it is Codable, Hashable, Equitable, RawRepresentable. whole array becomes Bytes in index
 - SwiftData cannot query dynamic properties (e.g. using Bidning and other dynamic data would not work)
 
 ### Query single ent by ID in View
