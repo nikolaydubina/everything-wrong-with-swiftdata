@@ -46,7 +46,7 @@ struct BookmarkButton: View {
 ### Query custom Comparable
 
 >[!CAUTION]
-> iCloud can crash in Production at runtime with non-root fields (e.g. `.rawValue`) in query
+> iCloud can crash when query non-root fields (e.g. `.rawValue`)
 
 SwiftData requires to compare with `.rawValue`, even if custom types are Codable, Comparable, Hashable
 
@@ -75,10 +75,10 @@ struct BookmarkButton: View {
 
 ## iCloud
 
-- iCloud has limited Development environment checks. crashes happen in Production that did not happen in Development
 - iCloud has no static checks. crashes happen at runtime
-- iCloud crashes at runtime when accessing non native Swift types (TODO: re-confirm this, this is very likely. past observation mixed with crahes due to nested field access)
-- iCloud crashes at runtime when accessing nested fields in predicates
+- iCloud has limited Development environment checks. crashes happen in Production that did not happen in Development
+- iCloud crashes when accessing non native Swift types (TODO: re-confirm this, this is very likely. past observation mixed with crahes due to nested field access)
+- iCloud crashes when accessing nested fields in predicates
 - iCloud schemas in Production cannot be deleted or changed. schemas are permanent and immutable.
 - there is no way to tell if sync is complete
 - there is no way to tell if sync is in-progress
