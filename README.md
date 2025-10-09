@@ -45,6 +45,9 @@ struct BookmarkButton: View {
 
 ### Query custom Comparable
 
+>[!CAUTION]
+> iCloud can crash in Production at runtime with non-root fields (e.g. `.rawValue`) in query
+
 SwiftData requires to compare with `.rawValue`, even if custom types are Codable, Comparable, Hashable
 
 ```swift
