@@ -4,6 +4,7 @@ _nuances, missing features, strange API, things to watchout, and wishlist_
 
 ## Development & Production
 
+- Development SwiftData may not use iCloud. to test iCloud at least TestFlight is required
 - Development SwiftData builds are not equivalent to Production builds. Build that works in Development can crash on start with obscure stack trace in Production (e.g. Testflight).
 
 ## Migrations
@@ -71,6 +72,8 @@ struct BookmarkButton: View {
 
 ## iCloud
 
+- iCloud crashes when accessing non native Swift types (TODO: re-confirm this, this is very likely. past observation mixed with crahes due to nested field access)
+- iCloud crashes when accessing nested fields in predicates
 - iCloud schemas in Production cannot be deleted or changed. schemas are permanent and immutable.
 - there is no way to tell if sync is complete
 - there is no way to tell if sync is in-progress
