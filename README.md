@@ -4,31 +4,7 @@ _nuances, missing features, strange API, things to watchout, and wishlist_
 
 ## Development & Production
 
-Development SwiftData builds are not equivalent to Production builds.
-
-Following works in Development, but crashes on start in Production.
-
-```swift
-import SwiftData
-import SwiftUI
-
-struct DynamicQuery<Model: PersistentModel, Content: View>: View {
-    let descriptor: FetchDescriptor<Model>
-    let content: ([Model]) -> Content
-
-    @Query private var results: [Model]
-
-    init(descriptor: FetchDescriptor<Model>, @ViewBuilder content: @escaping ([Model]) -> Content) {
-        self.descriptor = descriptor
-        self.content = content
-        _results = Query(descriptor)
-    }
-
-    var body: some View {
-        content(results)
-    }
-}
-```
+- Development SwiftData builds are not equivalent to Production builds. Build that works in Development can carsh on start with obscure stack trace in Production (e.g. Testflight).
 
 ## Migrations
 
