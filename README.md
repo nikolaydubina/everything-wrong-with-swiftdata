@@ -4,7 +4,7 @@ _nuances, missing features, strange API, things to watchout, and wishlist_
 
 ## Development & Production
 
-- Development SwiftData builds are not equivalent to Production builds. Build that works in Development can carsh on start with obscure stack trace in Production (e.g. Testflight).
+- Development SwiftData builds are not equivalent to Production builds. Build that works in Development can crash on start with obscure stack trace in Production (e.g. Testflight).
 
 ## Migrations
 
