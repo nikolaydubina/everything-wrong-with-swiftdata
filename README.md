@@ -71,6 +71,7 @@ struct BookmarkButton: View {
 
 ## iCloud
 
+- iCloud schemas in Production cannot be deleted or changed. schemas are permanent and immutable.
 - there is no way to tell if sync is complete
 - there is no way to tell if sync is in-progress
 - there is no way to tell when sync will start
