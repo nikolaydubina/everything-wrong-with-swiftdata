@@ -21,6 +21,7 @@ _nuances, missing features, strange API, things to watchout, and wishlist_
 
 
 Schema passed in `ModelConfiguration` inside `ModelContainer` will override Schema specified in `ModelContainer`. For example, non-versioned schema in `ModelConfiguration` will override verisioned schema in `ModelContainer` making schema non-versioned.
+Or maybe it does not override. It is not clear from documentation.
 
 ```swift
 ModelContainer(
@@ -28,7 +29,7 @@ ModelContainer(
     configurations: [
         ModelConfiguration(
             "CloudData",
-            // schema becomes non-versioned here!
+            // schema becomes non-versioned here! ... or not?
             schema: Schema([
                 UserSettingsModelV1.self,
             ]),
