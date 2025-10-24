@@ -9,6 +9,7 @@ _nuances, missing features, strange API, things to watchout, and wishlist_
 
 ## Migrations
 
+- any bump in versioned schema (major, minor, patch) requires migration script
 - on schema updates, SwiftData crashes if schema is not compatible (automatically upgradable)
 - chain of migration scripts (classes) is necessary
 - schema that did not have migration at first, then started to use migraitno scripts may have problems. decision about migration scripts is required from the start
