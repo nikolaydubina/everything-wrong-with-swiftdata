@@ -28,6 +28,7 @@ ModelContainer(
     configurations: [
         ModelConfiguration(
             "CloudData",
+            // schema becomes non-versioned here!
             schema: Schema([
                 UserSettingsModelV1.self,
             ]),
