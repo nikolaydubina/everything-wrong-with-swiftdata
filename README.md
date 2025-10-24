@@ -19,6 +19,26 @@ _nuances, missing features, strange API, things to watchout, and wishlist_
 - SwiftData ModelContext is not Sendable, which makes it impossible to make async repositories (e.g. actors) that use SwiftData
 - SwiftData does not automatically remove stale models inserted into ModelContext, manual deletion is necessary
 
+
+Schema passed in `ModelConfiguration` inside `ModelContainer` will override Schema specified in `ModelContainer`. For example, non-versioned schema in `ModelConfiguration` will override verisioned schema in `ModelContainer` making schema non-versioned.
+
+```swift
+ModelContainer(
+    for: Schema(versionedSchema: AppSchemaV1.self),
+    configurations: [
+        ModelConfiguration(
+            "CloudData",
+            schema: Schema([
+                UserSettingsModelV1.self,
+            ]),
+            isStoredInMemoryOnly: false,
+            allowsSave: true,
+            cloudKitDatabase: .private(Constant.cloudKitContainerIdentifier),
+        ),
+    ]
+)
+```
+
 ## Query
 
 - SwiftData cannot query in JSON encoded Data (exposed via cached private var and getters)
