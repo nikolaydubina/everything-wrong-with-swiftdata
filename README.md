@@ -101,7 +101,7 @@ struct BookmarkButton: View {
 - iCloud only supports lightweight migrations (which is not advertised in the guidelines from the beggining but discovered throught errors and crashes). this means migrations for iCloud has to be perfomed manually and SwiftData versioned schema mechanism migrations should not be used.
 - iCloud has no static checks. crashes happen at runtime
 - iCloud has limited Development environment checks. crashes happen in Production that did not happen in Development
-- iCloud crashes when accessing non native Swift types (TODO: re-confirm this, this is very likely. past observation mixed with crahes due to nested field access)
+- iCloud crashes when accessing non-native Swift types (e.g. enums, custom structs) in predicates, especially when accessing nested fields like `.rawValue`. Use stored raw value properties instead.
 - iCloud crashes when accessing nested fields in predicates
 - iCloud schemas in Production cannot be deleted or changed. schemas are permanent and immutable.
 - there is no way to tell if sync is complete
